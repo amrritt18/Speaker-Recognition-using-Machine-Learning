@@ -1,52 +1,91 @@
-# 🎤 Speaker Recognition using Machine Learning
+<h1 align="center">🎤 Speaker Recognition using Machine Learning</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python">
-  <img src="https://img.shields.io/badge/scikit--learn-orange?style=for-the-badge&logo=scikit-learn">
-  <img src="https://img.shields.io/badge/Librosa-red?style=for-the-badge">
-  <img src="https://img.shields.io/badge/OpenCV-green?style=for-the-badge&logo=opencv">
-  <img src="https://img.shields.io/badge/License-MIT-success?style=for-the-badge">
+A Machine Learning-based Speaker Recognition System that identifies a speaker from voice recordings using MFCC feature extraction and supervised learning.
+</p>
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-orange?style=for-the-badge&logo=scikit-learn)
+![Librosa](https://img.shields.io/badge/Librosa-Audio-red?style=for-the-badge)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green?style=for-the-badge)
+![Accuracy](https://img.shields.io/badge/Accuracy-94.44%25-success?style=for-the-badge)
+
 </p>
 
 ---
 
-## 📌 Project Overview
+# 📖 Overview
 
-This project implements a **Speaker Recognition System** capable of identifying speakers from their voice recordings using Machine Learning.
+Speaker Recognition is a biometric authentication technique that identifies a person based on unique characteristics of their voice.
 
-The system extracts **MFCC (Mel Frequency Cepstral Coefficients)** from audio signals, preprocesses the features, trains a classification model, and predicts the identity of an unknown speaker.
+This project uses **MFCC (Mel Frequency Cepstral Coefficients)** to extract meaningful audio features and trains a **Machine Learning classifier** capable of recognizing different speakers with high accuracy.
 
-The project demonstrates the complete Machine Learning workflow including:
+The project demonstrates an end-to-end machine learning workflow, including:
 
 - Audio preprocessing
 - Feature extraction
 - Data normalization
 - Model training
-- Prediction
-- Model saving
-- GUI-based testing using Tkinter
+- Model evaluation
+- Speaker prediction
+- Interactive GUI for testing
 
 ---
 
-# 🚀 Features
+# ✨ Features
 
-✅ Voice Recording
-
-✅ Audio Preprocessing
-
-✅ MFCC Feature Extraction
-
-✅ Machine Learning Classification
-
-✅ Speaker Prediction
-
-✅ Tkinter GUI
-
-✅ Saved ML Model (.pkl)
+- 🎙 Record voice using microphone
+- 🔊 Process WAV audio files
+- 📊 Extract MFCC features
+- 🤖 Train a Machine Learning model
+- 🧠 Predict speaker identity
+- 💾 Save trained model using Joblib
+- 🖥 Simple Tkinter GUI for inference
 
 ---
 
-# 🧠 Machine Learning Pipeline
+# 🛠 Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Programming | Python |
+| Machine Learning | Scikit-learn |
+| Audio Processing | Librosa |
+| Data Analysis | NumPy, Pandas |
+| Visualization | Matplotlib |
+| GUI | Tkinter |
+| Model Serialization | Joblib |
+
+---
+
+# 📂 Repository Structure
+
+```
+Speaker-Recognition-ML
+│
+├── VOICE_Dataset/
+│
+├── demo/
+│
+├── models/
+│   ├── voice_model.pkl
+│   ├── voice_encoder.pkl
+│   └── voice_scaler.pkl
+│
+├── notebooks/
+│   ├── voice.ipynb
+│   ├── predict.ipynb
+│   └── Tkinter.ipynb
+│
+├── .gitignore
+└── README.md
+```
+
+---
+
+# ⚙ Workflow
 
 ```
 Voice Recording
@@ -69,117 +108,42 @@ Speaker Prediction
 
 ---
 
-# 🛠 Technologies Used
+# 📊 Model Performance
 
-- Python
-- NumPy
-- Pandas
-- Librosa
-- Scikit-learn
-- Tkinter
-- Joblib
-- Matplotlib
+The model was evaluated on **18 unseen voice samples** from **9 different speakers**.
 
----
-
-# 📂 Repository Structure
-
-```
-Speaker-Recognition-ML
-│
-├── VOICE_Dataset/
-│
-├── voice.ipynb
-├── predict.ipynb
-├── Tkinter.ipynb
-│
-├── voice_model.pkl
-├── voice_encoder.pkl
-├── voice_scaler.pkl
-│
-├── README.md
-└── requirements.txt
-```
-
----
-
-# 📊 Dataset
-
-The dataset consists of multiple speakers.
-
-Each speaker has multiple audio samples.
-
-Example:
-
-```
-VOICE_Dataset
-
-│
-
-├── Person_1
-
-│      ├── audio1.wav
-
-│      ├── audio2.wav
-
-│
-
-├── Person_2
-
-│      ├── audio1.wav
-
-│      ├── audio2.wav
-```
-
----
-
-# ⚙ Feature Extraction
-
-The project uses **MFCC (Mel Frequency Cepstral Coefficients)** extracted using Librosa.
-
-These features capture the important characteristics of human speech and are widely used in speaker recognition systems.
-
----
-
-# 🤖 Model Training
-
-The workflow includes:
-
-- Dataset Loading
-- Feature Extraction
-- Label Encoding
-- Feature Scaling
-- Train-Test Split
-- Model Training
-- Model Evaluation
-- Model Saving
-
-The trained model is saved as:
-
-```
-voice_model.pkl
-```
-
----
-
-# 📈 Results
-
-Example Performance
+## Overall Performance
 
 | Metric | Score |
 |---------|-------|
-| Accuracy | 98% |
-| Precision | 98% |
-| Recall | 98% |
-| F1 Score | 98% |
-
-> Replace these values with your actual results.
+| Accuracy | **94.44%** |
+| Macro Precision | **96%** |
+| Macro Recall | **94%** |
+| Macro F1-score | **94%** |
 
 ---
 
-# ▶ How to Run
+## Classification Report
 
-## Clone Repository
+| Speaker | Precision | Recall | F1-Score |
+|----------|----------:|-------:|---------:|
+| Ajay | 1.00 | 1.00 | 1.00 |
+| Aman | 1.00 | 1.00 | 1.00 |
+| Amrit | 1.00 | 1.00 | 1.00 |
+| Aritra | 1.00 | 1.00 | 1.00 |
+| Atul | 1.00 | 1.00 | 1.00 |
+| Jamna | 1.00 | 1.00 | 1.00 |
+| Parth | 1.00 | 0.50 | 0.67 |
+| Raj | 0.67 | 1.00 | 0.80 |
+| Ram | 1.00 | 1.00 | 1.00 |
+
+The model achieved an overall **94.44% accuracy**, demonstrating reliable performance for speaker identification using MFCC-based feature extraction and supervised machine learning.
+
+---
+
+# 🚀 Getting Started
+
+## Clone the repository
 
 ```bash
 git clone https://github.com/amrritt18/Speaker-Recognition-ML.git
@@ -195,12 +159,12 @@ pip install -r requirements.txt
 
 ---
 
-## Train Model
+## Train the Model
 
-Run
+Open and execute
 
 ```
-voice.ipynb
+notebooks/voice.ipynb
 ```
 
 ---
@@ -210,41 +174,78 @@ voice.ipynb
 Run
 
 ```
-predict.ipynb
+notebooks/predict.ipynb
 ```
 
 ---
 
-## Launch GUI
+## Launch the GUI
 
 Run
 
 ```
-Tkinter.ipynb
+notebooks/Tkinter.ipynb
 ```
 
 ---
 
-# 📦 Requirements
+# 📦 Required Libraries
 
 ```
 numpy
 pandas
+scikit-learn
 librosa
 matplotlib
 joblib
-scikit-learn
-tkinter
+sounddevice
+soundfile
+jupyter
+ipykernel
+```
+
+---
+
+# 📸 Demo
+
+> Add screenshots or GIFs of your application inside the `demo/` folder.
+
+Example:
+
+```
+demo/
+│
+├── gui.png
+├── prediction.png
+└── workflow.png
+```
+
+After adding screenshots, include them like this:
+
+```markdown
+## GUI
+
+<p align="center">
+<img src="demo/gui.png" width="800">
+</p>
+
+## Prediction
+
+<p align="center">
+<img src="demo/prediction.png" width="800">
+</p>
 ```
 
 ---
 
 # 🔮 Future Improvements
 
-- Deep Learning based Speaker Recognition
+- Deep Learning-based Speaker Recognition
 - CNN/LSTM Models
-- Real-Time Microphone Prediction
+- Transformer-based Speech Embeddings
+- Real-time Microphone Prediction
 - Streamlit Web Application
+- Flask REST API
 - Docker Deployment
 - Multi-language Speaker Identification
 
@@ -254,20 +255,17 @@ tkinter
 
 **Amrit Raj**
 
-M.Tech in Robotics & AI
-
+🎓 M.Tech in Robotics & Artificial Intelligence  
 IIT Bhubaneswar
 
-GitHub
+GitHub: https://github.com/amrritt18
 
-https://github.com/amrritt18
+LinkedIn: *(Add your LinkedIn URL here)*
 
 ---
 
 # ⭐ Support
 
-If you found this project useful,
+If you found this project useful, consider giving it a ⭐ on GitHub.
 
-please ⭐ Star this repository.
-
-It motivates me to build more open-source AI projects.
+It helps others discover the project and motivates me to build more open-source AI and Robotics applications.
